@@ -58,20 +58,15 @@ try:
     result = GetParams("result")  # Get variable name where save results
 
     if module == "connect":
+        lander_folder_path = GetParams("lander_folder_path")
         api_key = GetParams("api_key")
-        host = GetParams("host")
-        port = GetParams("port")
-        rocketbot_path = GetParams("rocketbot_path")
-        command_line = GetParams("command_line")
 
-        if api_key and host and port and rocketbot_path:
-            mod_lander_session = Lander(
-                api_key, host, port, rocketbot_path, command_line
-            )
+        if lander_folder_path:
+            mod_lander_session = Lander(lander_folder_path, api_key)
 
             isConnected = mod_lander_session.connect()
 
-            SetVar(result, True)  # this should return is Connected
+            SetVar(result, isConnected)
         else:
             SetVar(result, False)
             raise ValueError(
@@ -80,7 +75,6 @@ try:
 
     elif module == "add_robot_to_queue":
         robot_name = GetParams("robot_name")
-        execution_mode = GetParams("execution_mode")
         robot_command_params = GetParams("robot_command_params")
         robot_data = GetParams("robot_data")
         robot_db_path = GetParams("robot_db_path")
@@ -88,7 +82,6 @@ try:
         if robot_name:
             res = mod_lander_session.add_robot_to_queue(
                 robot_name,
-                execution_mode,
                 robot_command_params,
                 robot_data,
                 robot_db_path,

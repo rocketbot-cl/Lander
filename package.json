@@ -63,72 +63,19 @@
 						"css": "col-md-6"
 					},
 					{
-						"type": "input",
-						"placeholder": "localhost",
+						"type": "folder_select",
+						"placeholder": "C:/Users/Usuario/Documents/Lander",
 						"title": {
-							"es": "IP o host en el cual está corriendo Lander",
-							"en": "IP or host on which Lander is running",
-							"pr": "IP ou host em que o Lander está a correr"
+							"es": "Ruta de la carpeta de Lander",
+							"en": "Lander folder path",
+							"pr": "Caminho da pasta do Lander"
 						},
 						"description": {
-							"es": "IP o host en el cual está corriendo Lander",
-							"en": "IP or host on which Lander is running",
-							"pr": "IP ou host em que o Lander está a correr"
+							"es": "Ruta de la carpeta donde se encuentra lander.exe",
+							"en": "Path to lander.exe folder",
+							"pr": "Caminho da pasta onde está o executável lander.exe"
 						},
-						"id": "host",
-						"css": "col-md-6"
-					},
-					{
-						"type": "input",
-						"placeholder": "9999",
-						"title": {
-							"es": "Puerto en el cual esta corriendo Lander",
-							"en": "Port on which Lander is running",
-							"pr": "Porto em que o Lander está a correr"
-						},
-						"description": {
-							"es": "Puerto en el cual esta corriendo Lander",
-							"en": "Port on which Lander is running",
-							"pr": "Porto em que o Lander está a correr"
-						},
-						"id": "port",
-						"css": "col-md-6"
-					},
-					{
-						"type": "file_select",
-						"placeholder": "C:/Users/Usuario/Documents/Rocketbot_win_20240528/rocketbot.exe",
-						"title": {
-							"es": "Ruta del ejecutable de Rocketbot",
-							"en": "Rocketbot executable path",
-							"pr": "Caminho do executável do Rocketbot"
-						},
-						"description": {
-							"es": "Ruta donde se encuentra rocketbot.exe en el ambiente donde se ejecuta Lander.",
-							"en": "Path to rocketbot.exe in the environment where Lander executes.",
-							"pr": "Caminho para o executável rocketbot.exe no ambiente onde o Lander executa."
-						},
-						"id": "rocketbot_path",
-						"css": "col-md-6"
-					},
-					{
-						"type": "input",
-						"placeholder": "--log='log/path' --debug='false'",
-						"title": {
-							"es": "Parámetros de línea de comandos",
-							"en": "Command line parameters",
-							"pr": "Parametros de linha de comando"
-						},
-						"description": {
-							"es": "Parámetros extra que recibirá Rocketbot al momento de ejecutar los robots con Lander.",
-							"en": "Extra parameters that will be passed to Rocketbot when running the Lander robots.",
-							"pr": "Parâmetros adicionais que receberão o Rocketbot ao executar os robôs do Lander."
-						},
-						"help": {
-							"es": "Opcional en caso de querer ejecutar comandos",
-							"en": "Optional in case you want to execute commands",
-							"pr": "Opcional em caso de queira executar comandos"
-						},
-						"id": "command_line",
+						"id": "lander_folder_path",
 						"css": "col-md-6"
 					},
 					{
@@ -200,33 +147,6 @@
 						},
 						"id": "robot_name",
 						"css": "col-md-12"
-					},
-					{
-						"type": "select",
-						"title": {
-							"es": "Modo de ejecución del robot:",
-							"en": "Execution mode:",
-							"pr": "Modo de execução do robo:"
-						},
-						"options": [
-							{
-								"title": "None mode",
-								"value": ""
-							},
-							{
-								"title": "Wait mode",
-								"value": "wait"
-							}
-						],
-						"help": {
-							"es": "Opcional. Si no se seleciona el bot corre en modo None",
-							"en": "Optional. If not selected, the bot runs in None mode",
-							"pr": "Opcional. Se não selecionar, o bot corre no modo None"
-						},
-						"id": "execution_mode",
-						"css": "col-md-6",
-						"data_type": "string",
-						"value": ""
 					},
 					{
 						"type": "input",
